@@ -207,19 +207,95 @@ textarea {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Footer */
-.footer {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 1.5rem 1rem;
+/*RDV*/
+.calendrier {
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #e0e0e0;
-  margin-top: 4rem;
 }
 
-.footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
+.cal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.jours-semaine {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.jours {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.jour {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.jour:hover {
+  background-color: #ddd;
+}
+
+.jour.selected {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.jour:disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.jour.vide {
+  visibility: hidden;
+}
+
+.horaires {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.horaire-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.horaire-btn {
+  padding: 10px;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.horaire-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.horaire-btn.selected {
+  background-color: #007bff;
+  color: white;
 }

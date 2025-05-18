@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 import { firebaseConfig } from "./config";
 
@@ -15,3 +16,4 @@ export const saveContactForm = async (data) => {
     return false;
   }
 };
+export const auth = getAuth(app);
